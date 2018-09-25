@@ -1,14 +1,20 @@
 new Vue({
   el:'#vue-app',
   data: {
-    nome: 'Zanatinha',
-    trabalho: 'Analista',
-    website: 'http://www.thenetninja.co.uk',
-    websiteTag: '<a href="http://www.thenetninja.co.uk">The Net Ninja Tag</a>'
+    idade: 27,
+    x: 0,
+    y: 0
   },
   methods: {
-    saudacao: function(tempo) {
-      return 'Bom' + tempo;
+    add: function(inc) {
+      this.idade += inc;
+    },
+    subtract: function(dec) {
+      this.idade -= dec;
+    },
+    updateXY: function(event) {
+      this.x = event.offsetX;
+      this.y = event.offsetY;
     }
   }
 });
