@@ -9,16 +9,11 @@
   <body>
     <div id="vue-app">
 
-      <h1> Eventos </h1>
-      <button @click="add(1)">Adicione um Ano</button>
-      <button v-on:click="subtract(1)">Diminua um Ano</button>
-      <button v-on:dblclick="add(10)">Adicione 10 Anos</button>
-      <button @dblclick="subtract(10)">Diminua 10 Anos</button>
-      <a @click.prevent="click" href="http://www.thenetninja.co.uk">The Net Niinja</a>
-      <p> Minha idade é: {{idade}}</p>
-      <div id="canvas" @mousemove="updateXY">
-        {{x}}, {{y}}
-      </div>
+      <h1> Eventos de Teclado </h1>
+      <label>Nome:</label>
+      <input type="text" @keyup.enter="logName"/>
+      <label>Idade:</label>
+      <input type="text" @keyup.alt.enter="logAge"/>
     </div>
 
     <script src="app.js"></script>
