@@ -14,6 +14,7 @@
       <button v-on:click="subtract(1)">Diminua um Ano</button>
       <button v-on:dblclick="add(10)">Adicione 10 Anos</button>
       <button @dblclick="subtract(10)">Diminua 10 Anos</button>
+      <a @click.prevent="click" href="http://www.thenetninja.co.uk">The Net Niinja</a>
       <p> Minha idade é: {{idade}}</p>
       <div id="canvas" @mousemove="updateXY">
         {{x}}, {{y}}
